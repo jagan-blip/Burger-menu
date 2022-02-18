@@ -9,27 +9,22 @@ function App() {
         e.preventDefault();
         setOpen(!open)
       }} className={`burgerbtn ${open ? "open" : ""}`}>
-        <div className='cross'>
-
-        </div>
-        <div className='crossleft'>
-
-        </div>
-        <div className='burger
-        '>
-           
-
-
-        </div>
+        
       </div>
-      <div className={`burgerbtn ${open ? "open" : ""}`}>
+      <div onClick={(e) => {
+        e.preventDefault();
+        setOpen(!open)
+      }} className={`burgerbtn ${open ? "open" : ""}`}>
         <label className='spn'>
           <span></span>
           <span></span>
           <span></span>
         </label>
       </div>
-      <div className={`burgerbtn ${open ? "open" : ""}` } id="cross">
+      <div   onClick={(e) => {
+        e.preventDefault();
+        setOpen(!open)
+      }}className={`burgerbtn ${open ? "open" : ""}` } id="cross">
         <label className='spn2'>
           <span></span>
           <span></span>
