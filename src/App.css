@@ -1,38 +1,264 @@
-.App {
-  text-align: center;
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app {
+  position: relative;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
   min-height: 100vh;
+}
+.spn {
   display: flex;
   flex-direction: column;
+  width: 70px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  text-align: center;
+}
+.spn span {
+  background: #fff;
+  
+  width: 60px;
+  height: 7px;
+
+  margin: 7px 7px;
+  transition: all 0.5s ease-in-out;
+}
+.burgerbtn.open .spn span:nth-child(1) {
+
+transition-delay: 0.3s;
+
+  width: 0px;
+  background: none;
+}
+.burgerbtn.open .spn span:nth-child(2) {
+ 
+transition-delay: 0.5s;
+width: 0px;
+background: none;
+}
+.burgerbtn.open .spn span:nth-child(3) {
+  
+  transition-delay: 0.7s;
+width: 0px;
+background: none;
+}
+
+/* cross */
+.spn2 {
+  display: flex;
+  flex-direction: column;
+  width: 70px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  text-align: center;
+  position: relative;
+}
+.spn2 span {
+  background: #fff;
+  
+  width: 0px;
+  height: 7px;
+  
+  margin: 7px 7px;
+  transition: all 0.5s ease-in-out;
+}
+.spn2 span:nth-child(1) {
+  transform: rotate(45deg) translateY(-30px) translateX(-10px);
+  transform-origin: left;
+  position: absolute;
+  top: 0;
+ 
+}
+.spn2 span:nth-child(2) {
+  transform: rotate(-45deg) translateY(15px) translateX(5px);
+  transform-origin: left;
+}
+.burgerbtn.open .spn2 span:nth-child(1) {
+  width: 50px;
+  transition-delay: 0.3s;
+}
+.burgerbtn.open .spn2 span:nth-child(2) {
+  width: 50px;
+  transition-delay: 0.6s;
+}
+.cross {
+  position: absolute;
+  top: 0%;
+}
+
+.burgerbtn {
+  display: flex;
+  position: relative;
   align-items: center;
+  width: 100px;
+  height: 100px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+ border: 2px solid white;
+
+ cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+
+.burger {
+  background-color: white;
+  width: 50px;
+  height: 6px;
+
+
+  
+  transition: all 0.5s ease-in;
+  position: fixed;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+/* burger  */
+.burger::before,
+.burger::after {
+ 
+  content: '';
+  position: absolute;
+  background-color: white;
+  width: 50px;
+  height: 6px;
+  transition: all 0.5s ease-in;
+
+}
+.burger::before {
+  transform: translateY(-16px);
+  transition: all 0.5s ease-in;
+}
+.burger::after {
+  transform: translateY(16px);
+  
+}
+
+.burgerbtn.open .burger::before {
+  animation-name: burgeranim;
+  animation-duration: 0.3s ;
+animation-delay: 0.3s;
+  animation-fill-mode: forwards;
+
+  animation-direction: alternate;
+ 
+}
+ .burgerbtn.open .burger {
+  transform-origin: left;
+  animation-name: animat;
+  animation-duration: 0.3s ;
+  animation-delay: 0.45s;
+  
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+  
+
+} 
+.burgerbtn.open .burger::after {
+  animation-name: burgeranim;
+  animation-duration: 0.3s ;
+  animation-delay: 0.6s;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+
+}
+/* .burgerbtn.open .burger::before {
+ 
+}
+.burgerbtn.open .burger::after {
+  
+}
+ */
+
+
+
+@keyframes burgeranim {
+  from{
+   
+   
+  }
+  90% {
+     
+    
+   
+   
   }
   to {
-    transform: rotate(360deg);
+    width: 0px;
+    background: none;
+    
+    
+  }
+} 
+
+@keyframes burgerspn {
+  from{
+   
+   
+  }
+ 50% {
+     
+  
+   
+   
+  }
+  to {
+    width: 0px;
+    background: none;
+    
+    
+  }
+} 
+
+
+@keyframes animat {
+  from {
+
+  }
+
+  90%
+  {
+    width: 0px;
+    background: none;
+    transform: translateX(-25px);
+  }
+  to {
+    width: 0px;
+    background: none;
+    transform:translateX(-25px);
+    
+
+  }
+}
+
+@keyframes cross {
+  0% {
+
+  }
+  20% {
+}
+  40% {
+
+  }
+  50%{
+    width: 0px;
+    background: none;
+    
+  }
+  55% {
+    transform: rotate(45deg);
+  }
+ 60% {
+   width: 10px;
+ }
+
+  100%{
+   
+    transform: rotate(45deg);
   }
 }
