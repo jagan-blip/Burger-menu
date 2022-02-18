@@ -18,7 +18,7 @@ body {
   flex-direction: column;
   width: 70px;
   cursor: pointer;
-  transition: all 0.2s ease-in-out 0.3s;
+  transition: all 0.1s ease-in-out ;
   text-align: center;
 }
 .spn span:nth-child(1) {
@@ -28,8 +28,8 @@ body {
   height: 7px;
 
   margin: 7px 7px;
-  transition: all 0.2s ease-in-out 0.3s;
-  transition-delay: 0.2s;
+  transition: all 0.1s ease-in-out ;
+  transition-delay: 0.6s;
 }
 .spn span:nth-child(2) {
   background: #fff;
@@ -38,8 +38,8 @@ body {
   height: 7px;
 
   margin: 7px 7px;
-  transition: all 0.3s ease-in-out 0.3s;
-  transition-delay: 0.35s;
+  transition: all 0.1s ease-in-out ;
+  transition-delay: 0.75s;
 }
 .spn span:nth-child(3) {
   background: #fff;
@@ -48,31 +48,25 @@ body {
   height: 7px;
 
   margin: 7px 7px;
-  transition: all 0.2s ease-in-out 0.3s;
-  transition-delay: 0.5s;
+  transition: all 0.1s ease-in-out ;
+  transition-delay: 0.85s;
 }
 .burgerbtn.open .spn span:nth-child(1) {
 
-transition-delay: 0.2s;
+transition-delay: 0.1s;
 
   width: 0px;
   background: none;
 }
 .burgerbtn.open .spn span:nth-child(2) {
  
-
-  
-
 width: 0px;
-
-transition-delay: 0.35s;
-
-
+transition-delay: 0.25s;
 
 }
 .burgerbtn.open .spn span:nth-child(3) {
   
-  transition-delay: 0.5s;
+  transition-delay: 0.45s;
 width: 0px;
 background: none;
 }
@@ -83,7 +77,7 @@ background: none;
   flex-direction: column;
   width: 70px;
   cursor: pointer;
-  transition: all 0.2s ease-in-out ;
+  transition: all 0.1s ease-in-out ;
   text-align: center;
   position: absolute;
   top: -50%;
@@ -95,7 +89,7 @@ background: none;
   height: 7px;
   
   margin: 7px 7px;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.1s ease-in-out;
   transition-delay: 0.2s;
 
 }
@@ -106,7 +100,7 @@ background: none;
   height: 7px;
   
   margin: 7px 7px;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.1s ease-in-out;
   transition-delay: 0.35s;
 
 }
@@ -123,11 +117,11 @@ background: none;
 }
 .burgerbtn.open .spn2 span:nth-child(1) {
   width: 50px;
-  transition-delay: 0.8s;
+  transition-delay: 0.6s;
 }
 .burgerbtn.open .spn2 span:nth-child(2) {
   width: 50px;
-  transition-delay: 1s;
+  transition-delay: 0.8s;
 }
 .cross {
   position: absolute;
@@ -147,159 +141,3 @@ background: none;
 }
 
 
-.burger {
-  background-color: white;
-  width: 50px;
-  height: 6px;
-
-
-  
-  transition: all 0.5s ease-in;
-  position: fixed;
-}
-
-
-/* burger  */
-.burger::before,
-.burger::after {
- 
-  content: '';
-  position: absolute;
-  background-color: white;
-  width: 50px;
-  height: 6px;
-  transition: all 0.5s ease-in;
-
-}
-.burger::before {
-  transform: translateY(-16px);
-  transition: all 0.5s ease-in;
-}
-.burger::after {
-  transform: translateY(16px);
-  
-}
-
-.burgerbtn.open .burger::before {
-  animation-name: burgeranim;
-  animation-duration: 0.3s ;
-animation-delay: 0.3s;
-  animation-fill-mode: forwards;
-
-  animation-direction: alternate;
- 
-}
- .burgerbtn.open .burger {
-  transform-origin: left;
-  animation-name: animat;
-  animation-duration: 0.3s ;
-  animation-delay: 0.45s;
-  
-  animation-direction: alternate;
-  animation-fill-mode: forwards;
-  
-
-} 
-.burgerbtn.open .burger::after {
-  animation-name: burgeranim;
-  animation-duration: 0.3s ;
-  animation-delay: 0.6s;
-  animation-direction: alternate;
-  animation-fill-mode: forwards;
-
-}
-/* .burgerbtn.open .burger::before {
- 
-}
-.burgerbtn.open .burger::after {
-  
-}
- */
-
-
-
-@keyframes burgeranim {
-  from{
-   
-   
-  }
-  90% {
-     
-    
-   
-   
-  }
-  to {
-    width: 0px;
-    background: none;
-    
-    
-  }
-} 
-
-@keyframes burgerspn {
-  from{
-   
-   
-  }
- 50% {
-     
-  
-   
-   
-  }
-  to {
-    width: 0px;
-    background: none;
-    
-    
-  }
-} 
-
-
-@keyframes animat {
-  from {
-
-  }
-
-  90%
-  {
-    width: 0px;
-    background: none;
-    transform: translateX(-25px);
-  }
-  to {
-    width: 0px;
-    background: none;
-    transform:translateX(-25px);
-    
-
-  }
-}
-
-@keyframes cross {
-  0% {
-
-  }
-  20% {
-}
-  40% {
-
-  }
-  50%{
-    width: 0px;
-    background: none;
-    
-  }
-  55% {
-    transform: rotate(45deg);
-  }
- 60% {
-   width: 10px;
- }
-
-  100%{
-   
-    transform: rotate(45deg);
-  }
-}
