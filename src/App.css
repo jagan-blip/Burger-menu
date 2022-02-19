@@ -25,31 +25,31 @@ body {
   background: #fff;
   
   width: 60px;
-  height: 7px;
+  height: 5px;
 
   margin: 7px 7px;
   transition: all 0.1s ease-in-out ;
-  transition-delay: 0.6s;
+  transition-delay: 0.5s;
 }
 .spn span:nth-child(2) {
   background: #fff;
   
   width: 60px;
-  height: 7px;
+  height: 5px;
 
   margin: 7px 7px;
   transition: all 0.1s ease-in-out ;
-  transition-delay: 0.75s;
+  transition-delay: 0.6s;
 }
 .spn span:nth-child(3) {
   background: #fff;
   
   width: 60px;
-  height: 7px;
+  height: 5px;
 
   margin: 7px 7px;
   transition: all 0.1s ease-in-out ;
-  transition-delay: 0.85s;
+  transition-delay: 0.7s;
 }
 .burgerbtn.open .spn span:nth-child(1) {
 
@@ -61,12 +61,12 @@ transition-delay: 0.1s;
 .burgerbtn.open .spn span:nth-child(2) {
  
 width: 0px;
-transition-delay: 0.25s;
+transition-delay: 0.2s;
 
 }
 .burgerbtn.open .spn span:nth-child(3) {
   
-  transition-delay: 0.45s;
+  transition-delay: 0.3s;
 width: 0px;
 background: none;
 }
@@ -86,22 +86,22 @@ background: none;
   background: #fff;
   
   width: 0px;
-  height: 7px;
+  height: 5px;
   
   margin: 7px 7px;
   transition: all 0.1s ease-in-out;
-  transition-delay: 0.2s;
+  transition-delay: 0.1s;
 
 }
 .spn2 span:nth-child(2) {
   background: #fff;
   
   width: 0px;
-  height: 7px;
+  height: 5px;
   
   margin: 7px 7px;
   transition: all 0.1s ease-in-out;
-  transition-delay: 0.35s;
+  transition-delay: 0.25s;
 
 }
 .spn2 span:nth-child(1) {
@@ -117,11 +117,11 @@ background: none;
 }
 .burgerbtn.open .spn2 span:nth-child(1) {
   width: 50px;
-  transition-delay: 0.6s;
+  transition-delay: 0.5s;
 }
 .burgerbtn.open .spn2 span:nth-child(2) {
   width: 50px;
-  transition-delay: 0.8s;
+  transition-delay: 0.6s;
 }
 .cross {
   position: absolute;

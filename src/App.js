@@ -5,10 +5,7 @@ function App() {
   const [open,setOpen] = useState(false)
   return (
     <div className="App">
-      <div onClick={(e) => {
-        e.preventDefault();
-        setOpen(!open)
-      }} className={`burgerbtn ${open ? "open" : ""}`}>
+      <div  className={`burgerbtn ${open ? "open" : ""}`}>
         
       </div>
       <div onClick={(e) => {
@@ -21,11 +18,11 @@ function App() {
           <span></span>
         </label>
       </div>
-      <div   onClick={(e) => {
+      <div   className={`burgerbtn ${open ? "open" : ""}` } id="cross">
+        <label onClick={(e) => {
         e.preventDefault();
         setOpen(!open)
-      }}className={`burgerbtn ${open ? "open" : ""}` } id="cross">
-        <label className='spn2'>
+      }} className='spn2'>
           <span></span>
           <span></span>
      
